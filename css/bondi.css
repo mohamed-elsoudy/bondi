@@ -1,0 +1,256 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+body {
+    font-family: "Roboto", "sans-serif";
+}
+/*Start Components*/
+.main-btn {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.main-btn:hover {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.main-heading {
+    position: relative;
+}
+.main-heading p {
+    font-weight: 500;
+}
+.main-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 170px;
+    height: 2px;
+    background-color: var(--green-color);
+}
+/*End Components*/
+nav {
+    background-color: var(--dark-color);
+    top: 10px;
+}
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+.navbar .navbar-nav .nav-link:hover, 
+.navbar .navbar-nav .nav-link.active{
+    color: var(--green-color);
+}
+.navbar .navbar-toggler svg {
+    color: white;
+}
+.navbar .navbar-toggler {
+    border-color: white;
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded = "true"] {
+    border-color: var(--green-color);
+}
+.navbar .navbar-toggler:focus svg, 
+.navbar .navbar-toggler:hover svg {
+    border: var(--green-color);
+}
+.icon {
+    padding: 0 10px;
+    border-left: 1px solid var(--green-color)
+}
+
+/*Start landing*/
+.landing {
+    height: calc(100vh - 72px);
+    background-color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.landing h1 {
+    margin: 0;
+    font-size: 36px;
+}
+.landing p {
+    margin-top: 10px;
+}
+
+/*End landing*/
+/*Start features*/
+.features .num {
+    position: relative;
+}
+.features .num div {
+    font-size: 220px;
+    font-weight: bold;
+    color: var(--dark-color);
+    opacity: .05; 
+}
+.features .num svg {
+    position: absolute;
+    color: var(--green-color);
+    opacity: 1;
+    bottom: 20px;
+    font-size: 100px;
+    font-weight: 400;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.features .container h2 {
+    color: var(--yellow-color);
+    font-size: 23px;
+}
+.features .container p {
+    line-height: 1.7;
+    font-weight: 500;
+}
+/*End features*/
+/*start Services*/
+.services {
+    background-color: var(--section-color);
+}
+.services .nav {
+    margin: auto;
+    justify-content: center;
+}
+.services .nav li .nav-link {
+    color: black;
+    font-weight: 500;
+}
+.services .nav li .nav-link:hover {
+    color: var(--red-color)
+}
+.services .nav li .nav-link.active {
+    color: var(--yellow-color);
+    background-color: var(--red-color);
+    border-radius: 30px;
+}
+.application > div > div {
+    border: 6px solid white;
+    position: relative;
+    overflow: hidden;
+}
+.application > div > div::before {
+    content: 'Application';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 25px;
+    background-color: #33d1cca4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    z-index: 2;
+    transition: .2s;
+}
+.application > div > div:hover::before {
+    left: 0;
+}
+.services .more {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    margin: auto;
+    display: block;
+    width: fit-content;
+}
+/* End Services */
+/* Start About section */
+.about > p {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.about .text {
+    max-width: 420px;
+}
+/* End About section */
+/*Start Team section*/
+.team {
+    background-color: var(--section-color);
+}
+.team h2 {
+    color: var(--yellow-color);
+    font-weight: 900;
+}
+.team .container .row > div > div {
+    position: relative;
+}
+.team .container .row {
+    margin-top: 50px;
+}
+.team .container .row > div > div::before {
+    content: 'Luke Skywalker';
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--green-color);
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+/*End Team section*/
+.start {
+    background-color: var(--dark-color);
+}
+.form {
+    height: 200px;
+    background-color: var(--yellow-color);
+}
+.form p {
+    color: var(--dark-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form input[type="text"] {
+    margin: 0 20px;
+    background-color: var(--yellow-color);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    caret-color: white;
+    min-width: 50%;
+}
+@media (max-width: 992px) {
+    .form input[type="text"] {
+        width: 90%;
+    }
+}
+.form input[type="text"]::placeholder {
+    color: white;
+}
+.form input[type="submit"] {
+    margin-left: 15px;
+    background-color: var(--dark-color);
+}
+/*Start Footer*/
+.footer {
+    background-color: var(--dark-color);
+}
+/*End Footer*/
+/* Frame work */
+.color-white {
+color: white;
+}
+.color-green {
+    color: var(--green-color);
+}
+.text-yello {
+    color: var(--yellow-color);
+}
+.w-fit-content {
+    width: fit-content;
+}
+/* Frame work */
